@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jacks.login.mapper.SelectionMapper">
+<!--    获取全部信息-->
+    <select id="findAll" resultType="com.jacks.login.pojo.Selection">
+        select * from selectlesson
+    </select>
+
+    <select id="findByTescore" resultType="Selection">
+        select * from `selectlesson` where `tescore` = #{tescore}
+    </select>
+
+    <insert id="add">
+        INSERT INTO selectlesson (id, stuid, lesid, setime, tescore)
+        VALUES
+            (#{id}, #{stuid}, #{lesid}, #{setime}, #{tescore});
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM selectlesson WHERE `id` = #{id}
+    </delete>
+
+    <update id="update" parameterType="Selection">
+        UPDATE selectlesson
+        SET `tescore` = #{tescore},
+            `stuid` = #{stuid}
+        WHERE `id` = #{id}
+    </update>
+
+    <select id="getById" resultType="Selection">
+        select * from `selectlesson` where `id` = #{id}
+    </select>
+</mapper>
