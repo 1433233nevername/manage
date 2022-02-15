@@ -72,6 +72,7 @@
                 }
             }],
             columns:[[
+                {field:'id',title:'序号',width:100},
                 {field:'name',title:'姓名',width:100},
                 {field:'number',title:'学号',width:100},
                 {field:'age',title:'年龄',width:100},

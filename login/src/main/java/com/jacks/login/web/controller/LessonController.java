@@ -1,7 +1,6 @@
 package com.jacks.login.web.controller;
 
 import com.jacks.login.pojo.Lesson;
-import com.jacks.login.pojo.Student;
 import com.jacks.login.service.LessonService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,18 +19,18 @@ public class LessonController {
 
     @RequestMapping(value = "/add")
     public String add() {
-        return "lesson_add";
+        return "lesson/lesson_add";
     }
 
     @RequestMapping(value = "/list")
     public String list() {
-        return "lesson_list";
+        return "lesson/lesson_list";
     }
 
     @RequestMapping(value = "/edit")
     public String edit(@RequestParam BigInteger id, Model model) {
         Lesson lesson = lessonService.getById(id);
         model.addAttribute("lesson", lesson);
-        return "lesson_edit";
+        return "lesson/lesson_edit";
     }
 }

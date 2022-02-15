@@ -6,7 +6,7 @@ import java.util.Date;
 public class Teacher {
     private BigInteger id;
 
-    private String teacheid;
+    private String teachid;
 
     private String teachername;
 
@@ -20,12 +20,12 @@ public class Teacher {
         return id;
     }
 
-    public String getTeacheid() {
-        return teacheid;
+    public String getTeachid() {
+        return teachid;
     }
 
-    public void setTeacheid(String teacheid) {
-        this.teacheid = teacheid;
+    public void setTeachid(String teachid) {
+        this.teachid = teachid;
     }
 
     public String getTeachername(){
@@ -46,6 +46,6 @@ public class Teacher {
 
     @Override
     public String toString() {
-        return "Teacher{" + ", id=" + id + '\'' + ", teachername=" + teachername + '\'' + ", time=" + time + '}';
+        return "Teacher{" + ", id=" + id + '\'' + ", teachid=" + teachid + '\''+ ", teachername=" + teachername + '\'' + ", time=" + time + '}';
     }
 }

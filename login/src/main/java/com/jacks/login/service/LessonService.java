@@ -18,8 +18,9 @@ public class LessonService {
     public List<Lesson> findAll() {
         return lessonMapper.findAll();
     }
-    public void add(String lename, String lenumber, String teachid, String letime) {
+    public void add(BigInteger id, String lename, String lenumber, String teachid, String letime) {
         Lesson lesson = new Lesson();
+        lesson.setId(id);
         lesson.setLename(lename);
         lesson.setLenumber(lenumber);
         lesson.setTeachid(teachid);

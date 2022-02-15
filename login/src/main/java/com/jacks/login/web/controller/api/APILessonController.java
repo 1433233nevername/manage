@@ -31,7 +31,7 @@ public class APILessonController {
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public CommonResult add(@RequestBody Lesson lesson) {
-        lessonService.add(lesson.getLename(), lesson.getLenumber(), lesson.getTeachid(), lesson.getLetime());
+        lessonService.add(lesson.getId(), lesson.getLename(), lesson.getLenumber(), lesson.getTeachid(), lesson.getLetime());
         return ResultUtil.ok(null);
     }
 

@@ -14,9 +14,9 @@
     </select>
 
     <insert id="add">
-        INSERT INTO lesson (lename, lenumber, teachid, letime, cretime)
+        INSERT INTO lesson (id, lename, lenumber, teachid, letime, cretime)
         VALUES
-            (#{lename}, #{lenumber}, #{teachid}, #{letime}, #{cretime});
+            (#{id}, #{lename}, #{lenumber}, #{teachid}, #{letime}, #{cretime});
     </insert>
 
     <delete id="delete">

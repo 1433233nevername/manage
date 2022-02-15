@@ -1,49 +1,49 @@
-<div id="lesson_list_center_content"></div>
-<div id="lesson_list_add_dialog"></div>
-<div id="lesson_list_edit_dialog"></div>
+<div id="selection_list_center_content"></div>
+<div id="selection_list_add_dialog"></div>
+<div id="selection_list_edit_dialog"></div>
 <script type="text/javascript">
     $(function(){
-        $('#lesson_list_center_content').datagrid({
+        $('#selection_list_center_content').datagrid({
             singleSelect: true,
-            url:'/api/lesson/list',
+            url:'/api/selection/list',
             toolbar: [{
                 iconCls: 'icon-add',
                 handler: function(){
-                    $('#lesson_list_add_dialog').dialog({
-                        title: '新增课程',
+                    $('#selection_list_add_dialog').dialog({
+                        title: '新增选课',
                         width: 400,
                         height: 200,
-                        href: '/lesson/add',
+                        href: '/selection/add',
                         modal: true,
                         onClose: function () {
-                            $('#lesson_list_center_content').datagrid('reload');
+                            $('#selection_list_center_content').datagrid('reload');
                         }
                     });
                 }
             },'-',{
                 iconCls: 'icon-edit',
                 handler: function(){
-                    const selectedRow = $('#lesson_list_center_content').datagrid('getSelected');
+                    const selectedRow = $('#selection_list_center_content').datagrid('getSelected');
                     if (selectedRow === undefined || selectedRow === null) {
                         $.messager.alert('警告','请先选中一行数据');
                         return;
                     }
                     const id = selectedRow.id;
-                    $('#lesson_list_edit_dialog').dialog({
-                        title: '编辑学生',
+                    $('#selection_list_edit_dialog').dialog({
+                        title: '编辑选课',
                         width: 400,
                         height: 200,
-                        href: '/lesson/edit?id=' + id,
+                        href: '/selection/edit?id=' + id,
                         modal: true,
                         onClose: function () {
-                            $('#lesson_list_center_content').datagrid('reload');
+                            $('#selection_list_center_content').datagrid('reload');
                         }
                     });
                 }
             },'-',{
                 iconCls: 'icon-remove',
                 handler: function(){
-                    const selectedRow = $('#lesson_list_center_content').datagrid('getSelected');
+                    const selectedRow = $('#selection_list_center_content').datagrid('getSelected');
                     if (selectedRow === undefined || selectedRow === null) {
                         $.messager.alert('警告','请先选中一行数据');
                         return;
@@ -51,7 +51,7 @@
                     const id = selectedRow.id;
                     $.ajax({
                         type: 'POST',
-                        url: "/api/lesson/delete",
+                        url: "/api/selection/delete",
                         contentType:'application/json', //需要加contentType
                         crossDomain: true,// 开启跨域支持
                         data: JSON.stringify({
@@ -62,21 +62,21 @@
                         success: function(rec) {
                             $.messager.show({
                                 title:'提示',
-                                msg:'删除课程成功',
+                                msg:'删除学生成功',
                                 timeout:2000,
                                 showType:'slide'
                             });
-                            $('#lesson_list_center_content').datagrid('reload');
+                            $('#selection_list_center_content').datagrid('reload');
                         }
                     });
                 }
             }],
             columns:[[
-                {field:'lename',title:'课程名字',width:100},
-                {field:'lenumber',title:'课程id',width:100},
-                {field:'teachid',title:'教师编号',width:100},
-                {field:'letime',title:'课时',width:100},
-                {field:'cretime',title:'创建时间',width:200}
+                {field:'id',title:'序号',width:100},
+                {field:'stuid',title:'学生id',width:100},
+                {field:'lesid',title:'课程id',width:100},
+                {field:'setime',title:'选课时间',width:200},
+                {field:'tescore',title:'考试得分',width:100},
             ]]
         });
     })

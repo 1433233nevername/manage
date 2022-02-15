@@ -27,7 +27,7 @@ return teacherMapper.findByName(taachername);
     public void add(BigInteger id, String teachid, String teachername) {
         Teacher teacher = new Teacher();
         teacher.setId(id);
-        teacher.setTeacheid(teachid);
+        teacher.setTeachid(teachid);
         teacher.setTeachername(teachername);
         teacher.setTime(new Date());
         teacherMapper.add(teacher);

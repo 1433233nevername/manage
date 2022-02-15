@@ -1,49 +1,49 @@
-<div id="teacher_list_center_content"></div>
-<div id="teacher_list_add_dialog"></div>
-<div id="teacher_list_edit_dialog"></div>
+<div id="lesson_list_center_content"></div>
+<div id="lesson_list_add_dialog"></div>
+<div id="lesson_list_edit_dialog"></div>
 <script type="text/javascript">
     $(function(){
-        $('#teacher_list_center_content').datagrid({
+        $('#lesson_list_center_content').datagrid({
             singleSelect: true,
-            url:'/api/teacher/list',
+            url:'/api/lesson/list',
             toolbar: [{
                 iconCls: 'icon-add',
                 handler: function(){
-                    $('#teacher_list_add_dialog').dialog({
-                        title: '新增教师',
+                    $('#lesson_list_add_dialog').dialog({
+                        title: '新增课程',
                         width: 400,
                         height: 200,
-                        href: '/teacher/add',
+                        href: '/lesson/add',
                         modal: true,
                         onClose: function () {
-                            $('#teacher_list_center_content').datagrid('reload');
+                            $('#lesson_list_center_content').datagrid('reload');
                         }
                     });
                 }
             },'-',{
                 iconCls: 'icon-edit',
                 handler: function(){
-                    const selectedRow = $('#teacher_list_center_content').datagrid('getSelected');
+                    const selectedRow = $('#lesson_list_center_content').datagrid('getSelected');
                     if (selectedRow === undefined || selectedRow === null) {
                         $.messager.alert('警告','请先选中一行数据');
                         return;
                     }
                     const id = selectedRow.id;
-                    $('#teacher_list_edit_dialog').dialog({
-                        title: '编辑教师',
+                    $('#lesson_list_edit_dialog').dialog({
+                        title: '编辑学生',
                         width: 400,
                         height: 200,
-                        href: '/teacher/edit?id=' + id,
+                        href: '/lesson/edit?id=' + id,
                         modal: true,
                         onClose: function () {
-                            $('#teacher_list_center_content').datagrid('reload');
+                            $('#lesson_list_center_content').datagrid('reload');
                         }
                     });
                 }
             },'-',{
                 iconCls: 'icon-remove',
                 handler: function(){
-                    const selectedRow = $('#teacher_list_center_content').datagrid('getSelected');
+                    const selectedRow = $('#lesson_list_center_content').datagrid('getSelected');
                     if (selectedRow === undefined || selectedRow === null) {
                         $.messager.alert('警告','请先选中一行数据');
                         return;
@@ -51,7 +51,7 @@
                     const id = selectedRow.id;
                     $.ajax({
                         type: 'POST',
-                        url: "/api/teacher/delete",
+                        url: "/api/lesson/delete",
                         contentType:'application/json', //需要加contentType
                         crossDomain: true,// 开启跨域支持
                         data: JSON.stringify({
@@ -62,19 +62,22 @@
                         success: function(rec) {
                             $.messager.show({
                                 title:'提示',
-                                msg:'删除老师成功',
+                                msg:'删除课程成功',
                                 timeout:2000,
                                 showType:'slide'
                             });
-                            $('#teacher_list_center_content').datagrid('reload');
+                            $('#lesson_list_center_content').datagrid('reload');
                         }
                     });
                 }
             }],
             columns:[[
-                {field:'id',title:'编号',width:100},
-                {field:'teachername',title:'姓名',width:100},
-                {field:'time',title:'创建时间',width:200}
+                {field:'id',title:'序号',width:100},
+                {field:'lename',title:'课程名字',width:100},
+                {field:'lenumber',title:'课程id',width:100},
+                {field:'teachid',title:'教师编号',width:100},
+                {field:'letime',title:'课时',width:100},
+                {field:'cretime',title:'创建时间',width:200}
             ]]
         });
     })

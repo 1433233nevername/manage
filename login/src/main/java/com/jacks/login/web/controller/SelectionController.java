@@ -18,18 +18,18 @@ public class SelectionController {
 
     @RequestMapping("/add")
     public String add(){
-        return "selection_add";
+        return "selection/selection_add";
     }
 
     @RequestMapping(value = "/list")
     public String list() {
-        return "selection_list";
+        return "selection/selection_list";
     }
 
     @RequestMapping(value = "/edit")
     public String edit(@RequestParam BigInteger id, Model model) {
         Selection selection = selectionService.getById(id);
         model.addAttribute("selection", selection);
-        return "selection_edit";
+        return "selection/selection_edit";
     }
 }
