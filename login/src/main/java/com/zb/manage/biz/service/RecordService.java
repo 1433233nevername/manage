@@ -1,8 +1,10 @@
 package com.zb.manage.biz.service;
 
 import com.zb.manage.biz.vo.RecordVO;
+import com.zb.manage.dal.mapper.ExamMapper;
 import com.zb.manage.dal.mapper.RecordMapper;
 import com.zb.manage.dal.mapper.StudentMapper;
+import com.zb.manage.dal.model.Exam;
 import com.zb.manage.dal.model.Record;
 import com.zb.manage.dal.model.Student;
 import org.springframework.beans.BeanUtils;
@@ -19,6 +21,9 @@ public class RecordService {
 
     @Resource
     private StudentMapper studentMapper;
+
+    @Resource
+    private ExamMapper examMapper;
 
     public List<RecordVO> findAll() {
         List<Record> recordList = recordMapper.findAll();
@@ -39,6 +44,11 @@ public class RecordService {
 
 
     public void add(BigInteger id, BigInteger exam_id, BigInteger student_id, Integer score) {
+        Exam exam = examMapper.getById(exam_id);
+        if (null == exam) {
+            throw new IllegalArgumentException("考试ID不合法:" + exam_id);
+        }
+
         Record record = new Record();
         record.setId(id);
         record.setExam_id(exam_id);

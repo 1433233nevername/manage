@@ -1,7 +1,7 @@
 <div id="record_add">
     <div>
         <label for="email">考试id:</label>
-        <input id="record_add_exam_id" class="easyui-textbox" />
+        <input id="record_add_exam_id"  type="text" class="easyui-numberbox">
         <br>
         <label for="email">学生id:</label>
         <input id="record_add_student_id" class="easyui-textbox" />
@@ -38,12 +38,22 @@
                     dataType: 'json', // 服务器响应的数据类型
                     async: false, // 关闭异步
                     success: function(rec) {
-                        $.messager.show({
-                            title:'提示',
-                            msg:'新增信息成功',
-                            timeout:2000,
-                            showType:'slide'
-                        });
+                        console.log(rec);
+                        if (rec.code === '0') {
+                            $.messager.show({
+                                title:'提示',
+                                msg:'新增信息成功',
+                                timeout:2000,
+                                showType:'slide'
+                            });
+                        } else {
+                            $.messager.alert({
+                                title:'错误',
+                                msg:rec.msg,
+                                timeout:2000
+                            });
+                        }
+
                         $('#record_list_add_dialog').dialog('close');
                     }
                 });
