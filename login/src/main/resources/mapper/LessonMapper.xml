@@ -3,9 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.jacks.login.mapper.LessonMapper">
+<mapper namespace="com.zb.manage.dal.mapper.LessonMapper">
 <!--    获取全部信息-->
-    <select id="findAll" resultType="com.jacks.login.pojo.Lesson">
+    <select id="findAll" resultType="com.zb.manage.dal.model.Lesson">
         select * from lesson
     </select>
 

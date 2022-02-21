@@ -5,8 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication(scanBasePackages = "com.jacks.login")
-@MapperScan(basePackages = "com.jacks.login.mapper")
+@SpringBootApplication(scanBasePackages = "com.zb.manage")
+@MapperScan(basePackages = "com.zb.manage.dal.mapper")
 public class LoginApplication {
     public static void main(String[] args) {
         try {

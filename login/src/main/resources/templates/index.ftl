@@ -39,6 +39,12 @@
                 }, {
                         id: 'selection_list',
                         text: '选课列表'
+                }, {
+                        id: 'exam_list',
+                        text: '考试列表'
+                }, {
+                        id: 'record_list',
+                        text: '考试信息列表'
                     }]
             }];
             $('#index_side_menu').sidemenu({
@@ -89,6 +95,32 @@
                         $('#index_tabs').tabs('add',{
                             title:'选课列表',
                             href:'/selection/list',
+                            closable:true,
+                            tools:[{
+                                iconCls:'icon-mini-refresh',
+                                handler:function(){
+                                    alert('refresh');
+                                }
+                            }]
+                        });
+                    }
+                    if (item.id === "exam_list") {
+                        $('#index_tabs').tabs('add',{
+                            title:'选课列表',
+                            href:'/exam/list',
+                            closable:true,
+                            tools:[{
+                                iconCls:'icon-mini-refresh',
+                                handler:function(){
+                                    alert('refresh');
+                                }
+                            }]
+                        });
+                    }
+                    if (item.id === "record_list") {
+                        $('#index_tabs').tabs('add',{
+                            title:'考试信息列表',
+                            href:'/record/list',
                             closable:true,
                             tools:[{
                                 iconCls:'icon-mini-refresh',

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zb.manage.dal.mapper.RecordMapper">
+<!--    获取全部信息-->
+    <select id="findAll" resultType="com.zb.manage.dal.model.Record">
+        select * from exam_record
+    </select>
+
+    <insert id="add">
+        INSERT INTO `exam_record` (id, exam_id, student_id, score, creat_time)
+        VALUES
+            (#{id}, #{exam_id}, #{student_id}, #{score}, #{creat_time});
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM `exam_record` WHERE `id` = #{id}
+    </delete>
+
+    <update id="update" parameterType="Record">
+        UPDATE `exam_record`
+        SET `exam_id` = #{exam_id},
+            `student_id` = #{student_id},
+            `score` = #{score}
+        WHERE `id` = #{id}
+    </update>
+
+    <select id="getById" resultType="Record">
+        select * from `exam_record` where `id` = #{id}
+    </select>
+</mapper>
