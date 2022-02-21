@@ -10,9 +10,9 @@
     </select>
 
     <insert id="add">
-        INSERT INTO `exam_record` (id, exam_id, student_id, score, creat_time)
+        INSERT INTO `exam_record` (id, examid, studentid, score, creattime)
         VALUES
-            (#{id}, #{exam_id}, #{student_id}, #{score}, #{creat_time});
+            (#{id}, #{examid}, #{studentid}, #{score}, #{creattime});
     </insert>
 
     <delete id="delete">
@@ -21,8 +21,8 @@
 
     <update id="update" parameterType="Record">
         UPDATE `exam_record`
-        SET `exam_id` = #{exam_id},
-            `student_id` = #{student_id},
+        SET `examid` = #{examid},
+            `studentid` = #{studentid},
             `score` = #{score}
         WHERE `id` = #{id}
     </update>

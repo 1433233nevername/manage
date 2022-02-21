@@ -31,7 +31,7 @@ public class APIRecordController {
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public CommonResult add(@RequestBody Record record) {
-        recordService.add(record.getId(), record.getExam_id(), record.getStudent_id(), record.getScore());
+        recordService.add(record.getId(), record.getExamid(), record.getStudentid(), record.getScore());
         return ResultUtil.ok(null);
     }
 

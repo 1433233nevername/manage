@@ -73,8 +73,8 @@
             }],
             columns:[[
                 {field:'id',title:'序号',width:100},
-                {field:'lesson_id',title:'课程id',width:100},
-                {field:'creat_time',title:'创建时间',width:100}
+                {field:'lessonid',title:'课程id',width:100},
+                {field:'creattime',title:'创建时间',width:100}
             ]]
         });
     })

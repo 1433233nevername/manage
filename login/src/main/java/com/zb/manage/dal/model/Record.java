@@ -6,13 +6,13 @@ import java.util.Date;
 public class Record {
     private BigInteger id;
 
-    private BigInteger exam_id;
+    private BigInteger examid;
 
-    private BigInteger student_id;
+    private BigInteger studentid;
 
     private Integer score;
 
-    private Date creat_time;
+    private Date creattime;
 
 
     public BigInteger getId() {
@@ -23,20 +23,20 @@ public class Record {
         this.id = id;
     }
 
-    public BigInteger getExam_id() {
-        return exam_id;
+    public BigInteger getExamid() {
+        return examid;
     }
 
-    public void setExam_id(BigInteger exam_id) {
-        this.exam_id = exam_id;
+    public void setExamid(BigInteger examid) {
+        this.examid = examid;
     }
 
-    public BigInteger getStudent_id() {
-        return student_id;
+    public BigInteger getStudentid() {
+        return studentid;
     }
 
-    public void setStudent_id(BigInteger student_id) {
-        this.student_id = student_id;
+    public void setStudentid(BigInteger studentid) {
+        this.studentid = studentid;
     }
 
     public Integer getScore() {
@@ -47,22 +47,22 @@ public class Record {
         this.score = score;
     }
 
-    public Date getCreat_time() {
-        return creat_time;
+    public Date getCreattime() {
+        return creattime;
     }
 
-    public void setCreat_time(Date creat_time) {
-        this.creat_time = creat_time;
+    public void setCreattime(Date creattime) {
+        this.creattime = creattime;
     }
 
     @Override
     public String toString() {
         return "Record{" +
                 "id=" + id +
-                ", exam_id=" + exam_id +
-                ", student_id=" + student_id +
+                ", examid=" + examid +
+                ", studentid=" + studentid +
                 ", score=" + score +
-                ", creat_time=" + creat_time +
+                ", creattime=" + creattime +
                 '}';
     }
 }

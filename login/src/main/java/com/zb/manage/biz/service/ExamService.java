@@ -19,11 +19,11 @@ public class ExamService {
         return examMapper.findAll();
     }
 
-    public void add(BigInteger id, String lesson_id) {
+    public void add(BigInteger id, String lessonid) {
         Exam exam = new Exam();
         exam.setId(id);
-        exam.setLesson_id(lesson_id);
-        exam.setCreat_time(new Date());
+        exam.setLessonid(lessonid);
+        exam.setCreattime(new Date());
         examMapper.add(exam);
     }
 

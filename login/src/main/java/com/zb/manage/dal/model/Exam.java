@@ -6,9 +6,9 @@ import java.util.Date;
 public class Exam {
     private BigInteger id;
 
-    private String lesson_id;
+    private String lessonid;
 
-    private Date creat_time;
+    private Date creattime;
 
     public BigInteger getId() {
         return id;
@@ -18,24 +18,24 @@ public class Exam {
         this.id = id;
     }
 
-    public String getLesson_id() {
-        return lesson_id;
+    public String getLessonid() {
+        return lessonid;
     }
 
-    public void setLesson_id(String lesson_id) {
-        this.lesson_id = lesson_id;
+    public void setLessonid(String lessonid) {
+        this.lessonid = lessonid;
     }
 
-    public Date getCreat_time() {
-        return creat_time;
+    public Date getCreattime() {
+        return creattime;
     }
 
-    public void setCreat_time(Date creat_time) {
-        this.creat_time = creat_time;
+    public void setCreattime(Date creattime) {
+        this.creattime = creattime;
     }
 
     @Override
     public String toString() {
-        return "Exam{" + "id='" + id + '\'' + ", lesson_id='" + lesson_id + '\'' + ", creat_time=" + creat_time + '}';
+        return "Exam{" + "id='" + id + '\'' + ", lessonid='" + lessonid + '\'' + ", creattime=" + creattime + '}';
     }
 }

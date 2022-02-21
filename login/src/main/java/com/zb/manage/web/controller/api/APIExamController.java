@@ -30,7 +30,7 @@ public class APIExamController {
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public CommonResult add(@RequestBody Exam exam) {
-        examService.add(exam.getId(), exam.getLesson_id());
+        examService.add(exam.getId(), exam.getLessonid());
         return ResultUtil.ok(null);
     }
 

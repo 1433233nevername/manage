@@ -36,25 +36,25 @@ public class RecordService {
             RecordVO recordVO = new RecordVO();
             BeanUtils.copyProperties(record, recordVO);
 
-            recordVO.setStudentName(studentMap.get(recordVO.getStudent_id()));
+            recordVO.setStudentName(studentMap.get(recordVO.getStudentid()));
             recordVOList.add(recordVO);
         }
         return recordVOList;
     }
 
 
-    public void add(BigInteger id, BigInteger exam_id, BigInteger student_id, Integer score) {
-        Exam exam = examMapper.getById(exam_id);
+    public void add(BigInteger id, BigInteger examid, BigInteger studentid, Integer score) {
+        Exam exam = examMapper.getById(examid);
         if (null == exam) {
-            throw new IllegalArgumentException("考试ID不合法:" + exam_id);
+            throw new IllegalArgumentException("考试ID不合法:" + examid);
         }
 
         Record record = new Record();
         record.setId(id);
-        record.setExam_id(exam_id);
-        record.setStudent_id(student_id);
+        record.setExamid(examid);
+        record.setStudentid(studentid);
         record.setScore(score);
-        record.setCreat_time(new Date());
+        record.setCreattime(new Date());
         recordMapper.add(record);
     }
 

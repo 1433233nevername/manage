@@ -73,11 +73,11 @@
             }],
             columns:[[
                 {field:'id',title:'序号',width:100},
-                {field:'exam_id',title:'考试id',width:100},
-                {field:'student_id',title:'学生id',width:100},
+                {field:'examid',title:'考试id',width:100},
+                {field:'studentid',title:'学生id',width:100},
                 {field:'studentName',title:'学生姓名',width:100},
                 {field:'score',title:'分数',width:100},
-                {field:'creat_time',title:'创建时间',width:100}
+                {field:'creattime',title:'创建时间',width:100}
             ]]
         });
     })
