@@ -4,10 +4,10 @@
         <input id="record_add_examid"  type="text" class="easyui-numberbox">
         <br>
         <label for="email">学生id:</label>
-        <input id="record_add_studentid" class="easyui-textbox" />
+        <input id="record_add_studentid" type="text" class="easyui-numberbox" />
         <br>
         <label for="email">成绩:</label>
-        <input id="record_add_score" class="easyui-textbox" />
+        <input id="record_add_score" type="text" class="easyui-numberbox" />
         <a id="record_add_submit" href="#" class="easyui-linkbutton" >提交</a>
     </div>
 </div>

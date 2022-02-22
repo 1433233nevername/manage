@@ -4,13 +4,13 @@
         <input id="lesson_add_lename" class="easyui-textbox" />
         <br>
         <label for="email">课程id:</label>
-        <input id="lesson_add_lenumber" class="easyui-textbox" />
+        <input id="lesson_add_lenumber" type="text" class="easyui-numberbox" />
         <br>
         <label for="email">教师编号:</label>
-        <input id="lesson_add_teachid" class="easyui-textbox" />
+        <input id="lesson_add_teachid" type="text" class="easyui-numberbox" />
         <br>
         <label for="email">课时:</label>
-        <input id="lesson_add_letime" class="easyui-textbox" />
+        <input id="lesson_add_letime" type="text" class="easyui-numberbox" />
         <a id="lesson_add_submit" href="#" class="easyui-linkbutton" >提交</a>
     </div>
 </div>

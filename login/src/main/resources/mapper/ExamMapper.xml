@@ -9,9 +9,6 @@
         select * from exam
     </select>
 
-    <select id="findByLesson_id" resultType="Exam">
-        select * from `exam` where `lessonid` = #{lessonid}
-    </select>
 
     <insert id="add">
         INSERT INTO exam (id, lessonid, creattime)

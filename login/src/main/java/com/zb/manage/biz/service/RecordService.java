@@ -43,7 +43,7 @@ public class RecordService {
     }
 
 
-    public void add(BigInteger id, BigInteger examid, BigInteger studentid, Integer score) {
+    public void add(BigInteger id, BigInteger  examid, BigInteger studentid, Integer score) {
         Exam exam = examMapper.getById(examid);
         if (null == exam) {
             throw new IllegalArgumentException("考试ID不合法:" + examid);

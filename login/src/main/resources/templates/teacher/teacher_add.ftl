@@ -1,10 +1,10 @@
 <div id="teacher_add">
     <div>
         <label for="email">序号:</label>
-        <input id="teacher_add_id" class="easyui-textbox" />
+        <input id="teacher_add_id" type="text" class="easyui-numberbox" />
         <br>
         <label for="email">教师id:</label>
-        <input id="teacher_add_teachid" class="easyui-textbox" />
+        <input id="teacher_add_teachid" type="text" class="easyui-numberbox" />
         <br>
         <label for="email">教师姓名:</label>
         <input id="teacher_add_teachername" class="easyui-textbox" />

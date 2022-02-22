@@ -5,10 +5,10 @@
         <input id="lesson_edit_lename" class="easyui-textbox" value="${lesson.lename}" />
         <br>
         <label for="email">教师编号:</label>
-        <input id="lesson_edit_teachid" class="easyui-textbox" value="${lesson.teachid}" />
+        <input id="lesson_edit_teachid" type="text" class="easyui-numberbox" value="${lesson.teachid}" />
         <br>
         <label for="email">课时:</label>
-        <input id="lesson_edit_letime" class="easyui-textbox" value="${lesson.letime}" />
+        <input id="lesson_edit_letime" type="text" class="easyui-numberbox" value="${lesson.letime}" />
         <a id="lesson_edit_submit" href="#" class="easyui-linkbutton" >提交</a>
     </div>
 </div>

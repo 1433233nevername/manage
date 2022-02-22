@@ -5,7 +5,7 @@
         <input id="student_edit_name" class="easyui-textbox" value="${student.name}" />
         <br>
         <label for="email">年龄:</label>
-        <input id="student_edit_age" class="easyui-textbox" value="${student.age}" />
+        <input id="student_edit_age" type="text" class="easyui-numberbox" value="${student.age}" />
         <a id="student_edit_submit" href="#" class="easyui-linkbutton" >提交</a>
     </div>
 </div>

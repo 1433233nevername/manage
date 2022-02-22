@@ -2,13 +2,13 @@
     <div>
         <input id="record_edit_id" hidden value="${record.id}" />
         <label for="email">考试id:</label>
-        <input id="record_edit_examid" class="easyui-textbox" value="${record.examid}" />
+        <input id="record_edit_examid" type="text" class="easyui-numberbox" value="${record.examid}" />
         <br>
         <label for="email">学生id:</label>
-        <input id="record_edit_studentid" class="easyui-textbox" value="${record.studentid}" />
+        <input id="record_edit_studentid" type="text" class="easyui-numberbox" value="${record.studentid}" />
         <br>
         <label for="email">分数:</label>
-        <input id="record_edit_score" class="easyui-textbox" value="${record.score}" />
+        <input id="record_edit_score" type="text" class="easyui-numberbox" value="${record.score}" />
         <a id="record_edit_submit" href="#" class="easyui-linkbutton" >提交</a>
     </div>
 </div>

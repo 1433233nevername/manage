@@ -2,10 +2,10 @@
     <div>
         <input id="selection_edit_id" hidden value="${selection.id}" />
         <label for="email">测试分数:</label>
-        <input id="selection_edit_tescore" class="easyui-textbox" value="${selection.tescore}" />
+        <input id="selection_edit_tescore" type="text" class="easyui-numberbox" value="${selection.tescore}" />
         <br>
         <label for="email">学生id:</label>
-        <input id="selection_edit_stuid" class="easyui-textbox" value="${selection.stuid}" />
+        <input id="selection_edit_stuid" type="text" class="easyui-numberbox" value="${selection.stuid}" />
         <a id="selection_edit_submit" href="#" class="easyui-linkbutton" >提交</a>
     </div>
 </div>

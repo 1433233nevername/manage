@@ -1,16 +1,16 @@
 <div id="selection_add">
     <div>
         <label for="email">序号:</label>
-        <input id="selection_add_id" class="easyui-textbox" />
+        <input id="selection_add_id" type="text" class="easyui-numberbox" />
         <br>
         <label for="email">学号:</label>
-        <input id="selection_add_stuid" class="easyui-textbox" />
+        <input id="selection_add_stuid" type="text" class="easyui-numberbox" />
         <br>
         <label for="email">课程编号:</label>
-        <input id="selection_add_lesid" class="easyui-textbox" />
+        <input id="selection_add_lesid" type="text" class="easyui-numberbox" />
         <br>
         <label for="email">考试得分:</label>
-        <input id="selection_add_tescore" class="easyui-textbox" />
+        <input id="selection_add_tescore" type="text" class="easyui-numberbox" />
         <a id="selection_add_submit" href="#" class="easyui-linkbutton" >提交</a>
     </div>
 </div>

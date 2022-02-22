@@ -2,7 +2,7 @@
     <div>
         <input id="exam_edit_id" hidden value="${exam.id}" />
         <label for="email">考试id:</label>
-        <input id="exam_edit_lessonid" class="easyui-textbox" value="${exam.lessonid}" />
+        <input id="exam_edit_lessonid" type="text" class="easyui-numberbox" value="${exam.lessonid}" />
         <a id="exam_edit_submit" href="#" class="easyui-linkbutton" >提交</a>
     </div>
 </div>

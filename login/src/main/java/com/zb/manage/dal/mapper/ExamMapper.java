@@ -6,7 +6,6 @@ import java.math.BigInteger;
 import java.util.List;
 
 public interface ExamMapper {
-    Exam findByLesson_id(@Param("lesson_id") String lesson_id);
 
     List<Exam> findAll();
 

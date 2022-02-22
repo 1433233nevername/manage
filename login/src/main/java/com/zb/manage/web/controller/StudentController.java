@@ -30,6 +30,6 @@ public class StudentController {
     public String edit(@RequestParam BigInteger id, Model model) {
         Student student = studentService.getById(id);
         model.addAttribute("student", student);
-        return "studet/student_edit";
+        return "student/student_edit";
     }
 }
