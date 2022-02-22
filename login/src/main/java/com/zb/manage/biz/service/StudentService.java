@@ -22,7 +22,7 @@ public class StudentService {
         return studentMapper.findByName(name);
     }
 
-    public void add(BigInteger id, String name,String number,String age,String entime) {
+    public void add(BigInteger id, String name,BigInteger number,String age,String entime) {
     Student student = new Student();
     student.setId(id);
     student.setName(name);

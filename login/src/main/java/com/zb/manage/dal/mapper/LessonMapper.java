@@ -17,6 +17,8 @@ public interface LessonMapper {
 
    void update(Lesson lesson);
 
+   Lesson getByLenumber(@Param("lenumber") BigInteger lenumber);
+
    Lesson getById(@Param("id") BigInteger id);
 }
 

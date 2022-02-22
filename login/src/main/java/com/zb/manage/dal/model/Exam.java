@@ -6,7 +6,7 @@ import java.util.Date;
 public class Exam {
     private BigInteger id;
 
-    private String lessonid;
+    private BigInteger lessonid;
 
     private Date creattime;
 
@@ -18,11 +18,11 @@ public class Exam {
         this.id = id;
     }
 
-    public String getLessonid() {
+    public BigInteger getLessonid() {
         return lessonid;
     }
 
-    public void setLessonid(String lessonid) {
+    public void setLessonid(BigInteger lessonid) {
         this.lessonid = lessonid;
     }
 

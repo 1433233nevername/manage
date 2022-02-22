@@ -6,9 +6,9 @@ import java.util.Date;
 public class Selection {
     private BigInteger id;
 
-    private String stuid;
+    private BigInteger stuid;
 
-    private String lesid;
+    private BigInteger lesid;
 
     private Date setime;
 
@@ -22,19 +22,19 @@ public class Selection {
         return id;
     }
 
-    public void setStuid(String stuid){
+    public void setStuid(BigInteger stuid){
         this.stuid = stuid;
     }
 
-    public String getStuid(){
+    public BigInteger getStuid(){
         return stuid;
     }
 
-    public String getLesid(){
+    public BigInteger getLesid(){
         return lesid;
     }
 
-    public void setLesid(String lesid){
+    public void setLesid(BigInteger lesid){
         this.lesid = lesid;
     }
 

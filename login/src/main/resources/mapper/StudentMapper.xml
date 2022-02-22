@@ -33,4 +33,8 @@
     <select id="getById" resultType="Student">
         select * from `student` where `id` = #{id}
     </select>
+
+    <select id="getByNumber" resultType="Student">
+        select * from `student` where `number` = #{number}
+    </select>
 </mapper>

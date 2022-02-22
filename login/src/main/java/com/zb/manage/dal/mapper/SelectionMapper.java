@@ -10,8 +10,6 @@ public interface SelectionMapper {
    //查询所有用户信息
    List<Selection> findAll();
 
-   Selection findByTescore(@Param("tescore") String tescore);
-
    void add(Selection selection);
 
    void delete(@Param("id") BigInteger id);

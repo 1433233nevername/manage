@@ -48,7 +48,10 @@ public class RecordService {
         if (null == exam) {
             throw new IllegalArgumentException("考试ID不合法:" + examid);
         }
-
+        Student student = studentMapper.getByNumber(studentid);
+        if(null == student) {
+            throw new IllegalArgumentException("学生ID不合法:" + studentid);
+        }
         Record record = new Record();
         record.setId(id);
         record.setExamid(examid);

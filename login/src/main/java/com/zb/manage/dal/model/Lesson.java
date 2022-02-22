@@ -8,9 +8,9 @@ public class Lesson {
 
     private String lename;
 
-    private String lenumber;
+    private BigInteger lenumber;
 
-    private  String teachid;
+    private  BigInteger teachid;
 
     private String letime;
 
@@ -32,19 +32,19 @@ public class Lesson {
         return lename;
     }
 
-    public void setTeachid(String teachid){
+    public void setTeachid(BigInteger teachid){
         this.teachid = teachid;
     }
 
-    public String getTeachid(){
+    public BigInteger getTeachid(){
         return teachid;
     }
 
-    public String getLenumber(){
+    public BigInteger getLenumber(){
         return lenumber;
     }
 
-    public void setLenumber(String lenumber){
+    public void setLenumber(BigInteger lenumber){
         this.lenumber = lenumber;
     }
 

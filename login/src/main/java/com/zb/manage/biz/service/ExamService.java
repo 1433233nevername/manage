@@ -1,7 +1,10 @@
 package com.zb.manage.biz.service;
 
 import com.zb.manage.dal.mapper.ExamMapper;
+import com.zb.manage.dal.mapper.LessonMapper;
 import com.zb.manage.dal.model.Exam;
+import com.zb.manage.dal.model.Lesson;
+import com.zb.manage.web.controller.LessonController;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -14,12 +17,18 @@ public class ExamService {
     @Resource
     private ExamMapper examMapper;
 
+    @Resource
+    private LessonMapper lessonMapper;
 
     public List<Exam> findAll() {
         return examMapper.findAll();
     }
 
-    public void add(BigInteger id, String lessonid) {
+    public void add(BigInteger id, BigInteger lessonid) {
+        Lesson lesson = lessonMapper.getByLenumber(lessonid);
+        if(null == lesson) {
+            throw new IllegalArgumentException("课程ID不合法:" + lessonid);
+        }
         Exam exam = new Exam();
         exam.setId(id);
         exam.setLessonid(lessonid);

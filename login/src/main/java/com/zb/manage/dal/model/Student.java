@@ -8,7 +8,7 @@ public class Student {
 
     private String name;
 
-    private String number;
+    private BigInteger number;
 
     private String age;
 
@@ -32,11 +32,11 @@ public class Student {
         this.name = name;
     }
 
-    public String getNumber() {
+    public BigInteger getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(BigInteger number) {
         this.number = number;
     }
 

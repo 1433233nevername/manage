@@ -4,7 +4,7 @@
         <input id="student_add_id" type="text" class="easyui-numberbox" />
         <br>
         <label for="email">姓名:</label>
-        <input id="student_add_name" class="easyui-numberbox" />
+        <input id="student_add_name" class="easyui-textbox" />
         <br>
         <label for="email">学号:</label>
         <input id="student_add_number" type="text" class="easyui-numberbox" />

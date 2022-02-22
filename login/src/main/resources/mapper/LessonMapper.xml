@@ -34,4 +34,8 @@
     <select id="getById" resultType="Lesson">
         select * from `lesson` where `id` = #{id}
     </select>
+
+    <select id="getByLenumber" resultType="Lesson">
+        select * from `lesson` where `lenumber` = #{lenumber}
+    </select>
 </mapper>

@@ -106,7 +106,7 @@
                     }
                     if (item.id === "exam_list") {
                         $('#index_tabs').tabs('add',{
-                            title:'选课列表',
+                            title:'考试列表',
                             href:'/exam/list',
                             closable:true,
                             tools:[{

@@ -20,6 +20,8 @@ public interface StudentMapper {
 
     Student getById(@Param("id") BigInteger id);
 
+    Student getByNumber(@Param("number") BigInteger number);
+
     Student findByAge(@Param("age") String age);
 }
 

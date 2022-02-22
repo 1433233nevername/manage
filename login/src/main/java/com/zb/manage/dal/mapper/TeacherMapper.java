@@ -18,6 +18,8 @@ public interface TeacherMapper {
 
    void update(Teacher teacher);
 
+   Teacher getByTeachid(@Param("teachid") BigInteger teachid);
+
    Teacher getById(@Param("id") BigInteger id);
 }
 
