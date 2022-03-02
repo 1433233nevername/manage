@@ -16,4 +16,6 @@ public interface ExamMapper {
     void update(Exam exam);
 
     Exam getById(@Param("id") BigInteger id);
+
+
 }

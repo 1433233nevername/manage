@@ -18,5 +18,7 @@ public interface RecordMapper {
    void update(Record Record);
 
    Record getById(@Param("id") BigInteger id);
+
+   List<Record> findByExamId(@Param("examId") BigInteger examId);
 }
 

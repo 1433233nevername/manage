@@ -30,4 +30,8 @@
     <select id="getById" resultType="Record">
         select * from `exam_record` where `id` = #{id}
     </select>
+
+    <select id="findByExamId" resultType="com.zb.manage.dal.model.Record">
+        select * from `exam_record` where `examid` = #{examId};
+    </select>
 </mapper>

@@ -2,8 +2,10 @@ package com.zb.manage.biz.service;
 
 import com.zb.manage.dal.mapper.ExamMapper;
 import com.zb.manage.dal.mapper.LessonMapper;
+import com.zb.manage.dal.mapper.RecordMapper;
 import com.zb.manage.dal.model.Exam;
 import com.zb.manage.dal.model.Lesson;
+import com.zb.manage.dal.model.Record;
 import com.zb.manage.web.controller.LessonController;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +21,9 @@ public class ExamService {
 
     @Resource
     private LessonMapper lessonMapper;
+
+    @Resource
+    private RecordMapper recordMapper;
 
     public List<Exam> findAll() {
         return examMapper.findAll();
@@ -37,6 +42,10 @@ public class ExamService {
     }
 
     public void delete(BigInteger id) {
+        List<Record> recordList = recordMapper.findByExamId(id);
+        if(recordList.size() > 0) {
+            throw new IllegalArgumentException("该考试不能删除,请先删除对应信息");
+        }
         examMapper.delete(id);
     }
 
