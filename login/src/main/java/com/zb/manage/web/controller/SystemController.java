@@ -11,4 +11,9 @@ public class SystemController {
     public String index() {
         return "index";
     }
+
+    @RequestMapping("/sign_in")
+    public String signIn() {
+        return "sign_in";
+    }
 }
