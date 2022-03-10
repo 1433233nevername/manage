@@ -16,11 +16,11 @@ public class Student {
 
     private Date retime;
 
-    public void setId(BigInteger id){
+    public void setId(BigInteger id) {
         this.id = id;
     }
 
-    public BigInteger getId(){
+    public BigInteger getId() {
         return id;
     }
 
@@ -40,32 +40,32 @@ public class Student {
         this.number = number;
     }
 
-    public String getAge(){
+    public String getAge() {
         return age;
     }
 
-    public void setAge(String age){
+    public void setAge(String age) {
         this.age = age;
     }
 
-    public String getEntime(){
+    public String getEntime() {
         return entime;
     }
 
-    public void setEntime(String entime){
+    public void setEntime(String entime) {
         this.entime = entime;
     }
 
-    public Date getRetime(){
+    public Date getRetime() {
         return retime;
     }
 
-    public void setRetime(Date retime){
+    public void setRetime(Date retime) {
         this.retime = retime;
     }
 
     @Override
     public String toString() {
-        return "Student{" + "name='" + name + '\'' + ", number='" + number + '\'' + ", age=" + age + '\''+", entime='" + entime + '\'' + ", retiem=" + retime + '}';
+        return "Student{" + "name='" + name + '\'' + ", number='" + number + '\'' + ", age=" + age + '\'' + ", entime='" + entime + '\'' + ", retiem=" + retime + '}';
     }
 }

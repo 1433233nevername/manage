@@ -24,12 +24,21 @@
                     dataType: 'json', // 服务器响应的数据类型
                     async: false, // 关闭异步
                     success: function(rec) {
-                        $.messager.show({
-                            title:'提示',
-                            msg:'新增考试成功',
-                            timeout:2000,
-                            showType:'slide'
-                        });
+                        console.log(rec);
+                        if(rec.code === '0') {
+                            $.messager.show({
+                                title: '提示',
+                                msg: '新增考试成功',
+                                timeout: 2000,
+                                showType: 'slide'
+                            });
+                        } else {
+                            $.messager.alert({
+                                title: '',
+                                msg: rec.msg,
+                                timeout: 2000,
+                            });
+                        }
                         $('#exam_list_add_dialog').dialog('close');
                     }
                 });

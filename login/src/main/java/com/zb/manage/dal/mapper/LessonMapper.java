@@ -7,18 +7,19 @@ import java.math.BigInteger;
 import java.util.List;
 
 public interface LessonMapper {
-   Lesson findByName(@Param("lename") String lename);
-   //查询所有课程信息
-   List<Lesson> findAll();
+    Lesson findByName(@Param("lename") String lename);
 
-   void add(Lesson lesson);
+    //查询所有课程信息
+    List<Lesson> findAll();
 
-   void delete(@Param("id") BigInteger id);
+    void add(Lesson lesson);
 
-   void update(Lesson lesson);
+    void delete(@Param("id") BigInteger id);
 
-   Lesson getByLenumber(@Param("lenumber") BigInteger lenumber);
+    void update(Lesson lesson);
 
-   Lesson getById(@Param("id") BigInteger id);
+    Lesson getByLenumber(@Param("lenumber") BigInteger lenumber);
+
+    Lesson getById(@Param("id") BigInteger id);
 }
 

@@ -30,7 +30,7 @@ public class APITeacherController {
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public CommonResult add(@RequestBody Teacher teacher) {
-        teacherService.add(teacher.getId(), teacher.getTeachid(),teacher.getTeachername());
+        teacherService.add(teacher.getId(), teacher.getTeachid(), teacher.getTeachername());
         return ResultUtil.ok(null);
     }
 

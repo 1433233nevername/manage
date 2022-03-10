@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 import java.math.BigInteger;
 
 @Controller
-@RequestMapping("/exam")
+@RequestMapping("/web/exam")
 public class ExamController {
 
     @Resource

@@ -19,7 +19,7 @@ public class TeacherService {
     }
 
     public Teacher getByName(String taachername) {
-return teacherMapper.findByName(taachername);
+        return teacherMapper.findByName(taachername);
     }
 
     public void add(BigInteger id, String teachid, String teachername) {
@@ -42,5 +42,5 @@ return teacherMapper.findByName(taachername);
     public Teacher getById(BigInteger id) {
         return teacherMapper.getById(id);
     }
- }
+}
 

@@ -7,12 +7,12 @@ import java.math.BigInteger;
 import java.util.List;
 
 public interface StudentMapper {
-   Student findByName(@Param("name") String name);
+    Student findByName(@Param("name") String name);
 
-   //查询所有学生信息
-   List<Student> findAll();
+    //查询所有学生信息
+    List<Student> findAll();
 
-   void add(Student student);
+    void add(Student student);
 
     void delete(@Param("id") BigInteger id);
 

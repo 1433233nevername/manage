@@ -43,4 +43,5 @@ public class APIUserController {
         CookieUtil.writeCookie(response, "user-name", userResult.getUsername(), 60 * 60);
         return ResultUtil.ok(null);
     }
+
 }

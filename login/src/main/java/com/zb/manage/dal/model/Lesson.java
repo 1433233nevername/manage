@@ -10,57 +10,57 @@ public class Lesson {
 
     private BigInteger lenumber;
 
-    private  BigInteger teachid;
+    private BigInteger teachid;
 
     private String letime;
 
     private Date cretime;
 
-    public void setId(BigInteger id){
+    public void setId(BigInteger id) {
         this.id = id;
     }
 
-    public BigInteger getId(){
+    public BigInteger getId() {
         return id;
     }
 
-    public void setLename(String lename){
+    public void setLename(String lename) {
         this.lename = lename;
     }
 
-    public String getLename(){
+    public String getLename() {
         return lename;
     }
 
-    public void setTeachid(BigInteger teachid){
+    public void setTeachid(BigInteger teachid) {
         this.teachid = teachid;
     }
 
-    public BigInteger getTeachid(){
+    public BigInteger getTeachid() {
         return teachid;
     }
 
-    public BigInteger getLenumber(){
+    public BigInteger getLenumber() {
         return lenumber;
     }
 
-    public void setLenumber(BigInteger lenumber){
+    public void setLenumber(BigInteger lenumber) {
         this.lenumber = lenumber;
     }
 
-    public String getLetime(){
+    public String getLetime() {
         return letime;
     }
 
-    public void setLetime(String letime){
+    public void setLetime(String letime) {
         this.letime = letime;
     }
 
-    public Date getCretime(){
+    public Date getCretime() {
         return cretime;
     }
 
-    public void setCretime(Date cretime){
+    public void setCretime(Date cretime) {
         this.cretime = cretime;
     }
 

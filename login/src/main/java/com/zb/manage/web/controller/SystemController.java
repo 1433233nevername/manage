@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class SystemController {
 
     @RequestMapping("/")
+    public String home() {
+        return "redirect:/web/index";
+    }
+
+    @RequestMapping("/web/index")
     public String index() {
         return "index";
     }

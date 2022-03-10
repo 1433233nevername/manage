@@ -33,4 +33,8 @@
     <select id="getById" resultType="Selection">
         select * from `selectlesson` where `id` = #{id}
     </select>
+
+    <select id="countByLessonId" resultType="int">
+        select count(*) from `selectlesson` where `lesid` = #{lessonId}
+    </select>
 </mapper>

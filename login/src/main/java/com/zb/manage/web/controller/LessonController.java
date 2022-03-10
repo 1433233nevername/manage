@@ -11,7 +11,7 @@ import javax.annotation.Resource;
 import java.math.BigInteger;
 
 @Controller
-@RequestMapping("/lesson")
+@RequestMapping("/web/lesson")
 public class LessonController {
 
     @Resource

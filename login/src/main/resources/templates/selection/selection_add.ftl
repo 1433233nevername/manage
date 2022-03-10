@@ -46,7 +46,7 @@
                     async: false, // 关闭异步
                     success: function(rec) {
                         console.log(rec);
-                        if(rec.code = '0') {
+                        if(rec.code === '0') {
                             $.messager.show({
                                 title:'提示',
                                 msg:'新增选课成功',
@@ -55,9 +55,9 @@
                             });
                         } else {
                             $.messager.alert({
-                                title:'提示',
-                                msg:rec.msg,
-                                timeout:2000,
+                                title: '提示',
+                                msg: rec.msg,
+                                timeout: 2000,
                             });
                         }
 

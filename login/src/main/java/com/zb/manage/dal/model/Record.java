@@ -14,7 +14,6 @@ public class Record {
 
     private Date creattime;
 
-
     public BigInteger getId() {
         return id;
     }

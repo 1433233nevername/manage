@@ -12,11 +12,11 @@ public class Teacher {
 
     private Date time;
 
-    public void setId(BigInteger id){
+    public void setId(BigInteger id) {
         this.id = id;
     }
 
-    public BigInteger getId(){
+    public BigInteger getId() {
         return id;
     }
 
@@ -28,24 +28,24 @@ public class Teacher {
         this.teachid = teachid;
     }
 
-    public String getTeachername(){
+    public String getTeachername() {
         return teachername;
     }
 
-    public void setTeachername(String teachername){
+    public void setTeachername(String teachername) {
         this.teachername = teachername;
     }
 
-    public Date getTime(){
+    public Date getTime() {
         return time;
     }
 
-    public void setTime(Date time ){
+    public void setTime(Date time) {
         this.time = time;
     }
 
     @Override
     public String toString() {
-        return "Teacher{" + ", id=" + id + '\'' + ", teachid=" + teachid + '\''+ ", teachername=" + teachername + '\'' + ", time=" + time + '}';
+        return "Teacher{" + ", id=" + id + '\'' + ", teachid=" + teachid + '\'' + ", teachername=" + teachername + '\'' + ", time=" + time + '}';
     }
 }

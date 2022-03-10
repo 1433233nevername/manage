@@ -48,9 +48,9 @@
                             });
                         } else {
                             $.messager.alert({
-                                title:'错误',
-                                msg:rec.msg,
-                                timeout:2000
+                                title: '错误',
+                                msg: rec.msg,
+                                timeout: 2000
                             });
                         }
 

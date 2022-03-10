@@ -55,9 +55,9 @@
                             });
                         } else {
                             $.messager.alert({
-                                title:'',
-                                msg:rec.msg,
-                                timeout:2000
+                                title: '提示',
+                                msg: rec.msg,
+                                timeout: 2000
                             });
                         }
 

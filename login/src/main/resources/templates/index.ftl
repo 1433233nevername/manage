@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>教学管理系统</title>
-    <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
-    <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
-    <link rel="stylesheet" type="text/css" href="easyui/themes/color.css">
-    <link rel="stylesheet" type="text/css" href="easyui/demo/demo.css">
-    <script type="text/javascript" src="jquery.js"></script>
-    <script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="/easyui/themes/color.css">
+    <link rel="stylesheet" type="text/css" href="/easyui/demo/demo.css">
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/easyui/jquery.easyui.min.js"></script>
 
 </head>
 <body class="easyui-layout">
@@ -55,7 +55,7 @@
                     if (item.id === "student_list") {
                         $('#index_tabs').tabs('add',{
                             title:'学生列表',
-                            href:'/student/list',
+                            href:'/web/student/list',
                             closable:true,
                             tools:[{
                                 iconCls:'icon-mini-refresh',
@@ -68,7 +68,7 @@
                     if (item.id === "teacher_list") {
                         $('#index_tabs').tabs('add',{
                             title:'教师列表',
-                            href:'/teacher/list',
+                            href:'/web/teacher/list',
                             closable:true,
                             tools:[{
                                 iconCls:'icon-mini-refresh',
@@ -81,7 +81,7 @@
                     if (item.id === "lesson_list") {
                         $('#index_tabs').tabs('add',{
                             title:'课程列表',
-                            href:'/lesson/list',
+                            href:'/web/lesson/list',
                             closable:true,
                             tools:[{
                                 iconCls:'icon-mini-refresh',
@@ -94,7 +94,7 @@
                     if (item.id === "selection_list") {
                         $('#index_tabs').tabs('add',{
                             title:'选课列表',
-                            href:'/selection/list',
+                            href:'/web/selection/list',
                             closable:true,
                             tools:[{
                                 iconCls:'icon-mini-refresh',
@@ -107,7 +107,7 @@
                     if (item.id === "exam_list") {
                         $('#index_tabs').tabs('add',{
                             title:'考试列表',
-                            href:'/exam/list',
+                            href:'/web/exam/list',
                             closable:true,
                             tools:[{
                                 iconCls:'icon-mini-refresh',
@@ -120,7 +120,7 @@
                     if (item.id === "record_list") {
                         $('#index_tabs').tabs('add',{
                             title:'考试信息列表',
-                            href:'/record/list',
+                            href:'/web/record/list',
                             closable:true,
                             tools:[{
                                 iconCls:'icon-mini-refresh',

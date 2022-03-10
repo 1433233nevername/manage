@@ -29,13 +29,13 @@ public class SelectionService {
         return selectionMapper.findAll();
     }
 
-    public void add(BigInteger id, BigInteger stuid, BigInteger lesid,String tescore) {
+    public void add(BigInteger id, BigInteger stuid, BigInteger lesid, String tescore) {
         Student student = studentMapper.getByNumber(stuid);
-        if(null == student) {
+        if (null == student) {
             throw new IllegalArgumentException("学生ID不合法:" + stuid);
         }
         Lesson lesson = lessonMapper.getByLenumber(lesid);
-        if(null == lesson) {
+        if (null == lesson) {
             throw new IllegalArgumentException("课程ID不合法:" + lesid);
         }
         Selection selection = new Selection();

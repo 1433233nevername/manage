@@ -7,15 +7,17 @@ import java.math.BigInteger;
 import java.util.List;
 
 public interface SelectionMapper {
-   //查询所有用户信息
-   List<Selection> findAll();
+    //查询所有用户信息
+    List<Selection> findAll();
 
-   void add(Selection selection);
+    void add(Selection selection);
 
-   void delete(@Param("id") BigInteger id);
+    void delete(@Param("id") BigInteger id);
 
-   void update(Selection selection);
+    void update(Selection selection);
 
     Selection getById(@Param("id") BigInteger id);
+
+    int countByLessonId(@Param("lessonId") BigInteger lessonId);
 }
 

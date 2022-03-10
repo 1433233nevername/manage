@@ -31,7 +31,7 @@ public class ExamService {
 
     public void add(BigInteger id, BigInteger lessonid) {
         Lesson lesson = lessonMapper.getByLenumber(lessonid);
-        if(null == lesson) {
+        if (null == lesson) {
             throw new IllegalArgumentException("课程ID不合法:" + lessonid);
         }
         Exam exam = new Exam();
@@ -43,7 +43,7 @@ public class ExamService {
 
     public void delete(BigInteger id) {
         List<Record> recordList = recordMapper.findByExamId(id);
-        if(recordList.size() > 0) {
+        if (recordList.size() > 0) {
             throw new IllegalArgumentException("该考试不能删除,请先删除对应信息");
         }
         examMapper.delete(id);

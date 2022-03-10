@@ -22,15 +22,15 @@ public class StudentService {
         return studentMapper.findByName(name);
     }
 
-    public void add(BigInteger id, String name,BigInteger number,String age,String entime) {
-    Student student = new Student();
-    student.setId(id);
-    student.setName(name);
-    student.setAge(age);
-    student.setEntime(entime);
-    student.setRetime(new Date());
-    student.setNumber(number);
-    studentMapper.add(student);
+    public void add(BigInteger id, String name, BigInteger number, String age, String entime) {
+        Student student = new Student();
+        student.setId(id);
+        student.setName(name);
+        student.setAge(age);
+        student.setEntime(entime);
+        student.setRetime(new Date());
+        student.setNumber(number);
+        studentMapper.add(student);
     }
 
     public void delete(BigInteger id) {

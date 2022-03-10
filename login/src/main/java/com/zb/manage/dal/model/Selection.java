@@ -14,43 +14,43 @@ public class Selection {
 
     private String tescore;
 
-    public void setId(BigInteger id){
+    public void setId(BigInteger id) {
         this.id = id;
     }
 
-    public BigInteger getId(){
+    public BigInteger getId() {
         return id;
     }
 
-    public void setStuid(BigInteger stuid){
+    public void setStuid(BigInteger stuid) {
         this.stuid = stuid;
     }
 
-    public BigInteger getStuid(){
+    public BigInteger getStuid() {
         return stuid;
     }
 
-    public BigInteger getLesid(){
+    public BigInteger getLesid() {
         return lesid;
     }
 
-    public void setLesid(BigInteger lesid){
+    public void setLesid(BigInteger lesid) {
         this.lesid = lesid;
     }
 
-    public Date getSetime(){
+    public Date getSetime() {
         return setime;
     }
 
-    public void setSetime(Date setime){
+    public void setSetime(Date setime) {
         this.setime = setime;
     }
 
-    public String getTescore(){
+    public String getTescore() {
         return tescore;
     }
 
-    public void setTescoree(String tescore){
+    public void setTescoree(String tescore) {
         this.tescore = tescore;
     }
 

@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 import java.math.BigInteger;
 
 @Controller
-@RequestMapping("/selection")
+@RequestMapping("/web/selection")
 public class SelectionController {
 
     @Resource

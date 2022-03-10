@@ -43,13 +43,13 @@ public class RecordService {
     }
 
 
-    public void add(BigInteger id, BigInteger  examid, BigInteger studentid, Integer score) {
+    public void add(BigInteger id, BigInteger examid, BigInteger studentid, Integer score) {
         Exam exam = examMapper.getById(examid);
         if (null == exam) {
             throw new IllegalArgumentException("考试ID不合法:" + examid);
         }
         Student student = studentMapper.getByNumber(studentid);
-        if(null == student) {
+        if (null == student) {
             throw new IllegalArgumentException("学生ID不合法:" + studentid);
         }
         Record record = new Record();
@@ -72,5 +72,5 @@ public class RecordService {
     public Record getById(BigInteger id) {
         return recordMapper.getById(id);
     }
- }
+}
 

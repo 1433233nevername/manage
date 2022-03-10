@@ -17,16 +17,11 @@ public class UserService {
     }
 
     public User getByName(String userName) {
-return userMapper.findByName(userName);
+        return userMapper.findByName(userName);
     }
 
     public void add(String username, String password) {
         User user = new User();
-        user.setAddr("默认地址");
-        user.setLove("默认喜欢");
-        user.setBirthday("默认");
-        user.setEducation("默认");
-        user.setSex("默认");
         user.setUsername(username);
         user.setPassword(password);
         userMapper.add(user);
