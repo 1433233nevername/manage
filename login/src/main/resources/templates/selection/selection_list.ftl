@@ -13,7 +13,7 @@
                         title: '新增选课',
                         width: 400,
                         height: 200,
-                        href: '/selection/add',
+                        href: '/web/selection/add',
                         modal: true,
                         onClose: function () {
                             $('#selection_list_center_content').datagrid('reload');
@@ -33,7 +33,7 @@
                         title: '编辑选课',
                         width: 400,
                         height: 200,
-                        href: '/selection/edit?id=' + id,
+                        href: '/web/selection/edit?id=' + id,
                         modal: true,
                         onClose: function () {
                             $('#selection_list_center_content').datagrid('reload');

@@ -13,7 +13,7 @@
                         title: '新增课程',
                         width: 400,
                         height: 200,
-                        href: '/lesson/add',
+                        href: '/web/lesson/add',
                         modal: true,
                         onClose: function () {
                             $('#lesson_list_center_content').datagrid('reload');
@@ -33,7 +33,7 @@
                         title: '编辑学生',
                         width: 400,
                         height: 200,
-                        href: '/lesson/edit?id=' + id,
+                        href: '/web/lesson/edit?id=' + id,
                         modal: true,
                         onClose: function () {
                             $('#lesson_list_center_content').datagrid('reload');

@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>登录</title>
-    <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
-    <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
-    <link rel="stylesheet" type="text/css" href="easyui/themes/color.css">
-    <link rel="stylesheet" type="text/css" href="easyui/demo/demo.css">
-    <script type="text/javascript" src="jquery.js"></script>
-    <script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="/easyui/themes/color.css">
+    <link rel="stylesheet" type="text/css" href="/easyui/demo/demo.css">
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/easyui/jquery.easyui.min.js"></script>
 </head>
 <body>
 <div class="easyui-panel" title="用户登录" style="width:100%;max-width:400px;padding:30px 60px">

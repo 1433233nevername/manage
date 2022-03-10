@@ -13,7 +13,7 @@
                         title: '新增学生',
                         width: 400,
                         height: 200,
-                        href: '/student/add',
+                        href: '/web/student/add',
                         modal: true,
                         onClose: function () {
                             $('#student_list_center_content').datagrid('reload');
@@ -33,7 +33,7 @@
                         title: '编辑学生',
                         width: 400,
                         height: 200,
-                        href: '/student/edit?id=' + id,
+                        href: '/web/student/edit?id=' + id,
                         modal: true,
                         onClose: function () {
                             $('#student_list_center_content').datagrid('reload');

@@ -13,7 +13,7 @@
                         title: '新增教师',
                         width: 400,
                         height: 200,
-                        href: '/teacher/add',
+                        href: '/web/teacher/add',
                         modal: true,
                         onClose: function () {
                             $('#teacher_list_center_content').datagrid('reload');
@@ -33,7 +33,7 @@
                         title: '编辑教师',
                         width: 400,
                         height: 200,
-                        href: '/teacher/edit?id=' + id,
+                        href: '/web/teacher/edit?id=' + id,
                         modal: true,
                         onClose: function () {
                             $('#teacher_list_center_content').datagrid('reload');

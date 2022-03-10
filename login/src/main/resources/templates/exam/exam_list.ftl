@@ -13,7 +13,7 @@
                         title: '新增考试',
                         width: 400,
                         height: 200,
-                        href: '/exam/add',
+                        href: '/web/exam/add',
                         modal: true,
                         onClose: function () {
                             $('#exam_list_center_content').datagrid('reload');
@@ -33,7 +33,7 @@
                         title: '编辑考试',
                         width: 400,
                         height: 200,
-                        href: '/exam/edit?id=' + id,
+                        href: '/web/exam/edit?id=' + id,
                         modal: true,
                         onClose: function () {
                             $('#exam_list_center_content').datagrid('reload');
