@@ -1,6 +1,6 @@
 package com.zb.manage.web.controller.api;
 
-import com.zb.manage.dal.model.Student;
+import com.zb.manage.dal.model.StudentDO;
 import com.zb.manage.biz.service.StudentService;
 import com.zb.manage.web.result.CommonResult;
 import com.zb.manage.web.result.ListResult;
@@ -22,26 +22,26 @@ public class APIStudentController {
 
     @RequestMapping(value = "/list", method = RequestMethod.POST)
     public ListResult getStudentList() {
-        List<Student> studentList = studentService.findAll();
+        List<StudentDO> studentList = studentService.findAll();
         ListResult listResult = new ListResult();
         listResult.setRows(studentList);
         return listResult;
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public CommonResult add(@RequestBody Student student) {
+    public CommonResult add(@RequestBody StudentDO student) {
         studentService.add(student.getId(), student.getName(), student.getNumber(), student.getAge(), student.getEntime());
         return ResultUtil.ok(null);
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
-    public CommonResult delete(@RequestBody Student student) {
+    public CommonResult delete(@RequestBody StudentDO student) {
         studentService.delete(student.getId());
         return ResultUtil.ok(null);
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public CommonResult update(@RequestBody Student student) {
+    public CommonResult update(@RequestBody StudentDO student) {
         studentService.update(student);
         return ResultUtil.ok(null);
     }

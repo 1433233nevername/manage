@@ -1,7 +1,7 @@
 package com.zb.manage.web.controller.api;
 
 import com.zb.manage.biz.vo.RecordVO;
-import com.zb.manage.dal.model.Record;
+import com.zb.manage.dal.model.RecordDO;
 import com.zb.manage.biz.service.RecordService;
 import com.zb.manage.web.result.CommonResult;
 import com.zb.manage.web.result.ListResult;
@@ -30,19 +30,19 @@ public class APIRecordController {
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public CommonResult add(@RequestBody Record record) {
+    public CommonResult add(@RequestBody RecordDO record) {
         recordService.add(record.getId(), record.getExamid(), record.getStudentid(), record.getScore());
         return ResultUtil.ok(null);
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
-    public CommonResult delete(@RequestBody Record record) {
+    public CommonResult delete(@RequestBody RecordDO record) {
         recordService.delete(record.getId());
         return ResultUtil.ok(null);
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public CommonResult update(@RequestBody Record record) {
+    public CommonResult update(@RequestBody RecordDO record) {
         recordService.update(record);
         return ResultUtil.ok(null);
     }

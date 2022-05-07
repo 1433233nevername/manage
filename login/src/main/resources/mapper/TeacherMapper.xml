@@ -5,11 +5,11 @@
 
 <mapper namespace="com.zb.manage.dal.mapper.TeacherMapper">
 <!--    获取全部信息-->
-    <select id="findAll" resultType="com.zb.manage.dal.model.Teacher">
+    <select id="findAll" resultType="com.zb.manage.dal.model.TeacherDO">
         select * from teacher
     </select>
 
-    <select id="findByName" resultType="Teacher">
+    <select id="findByName" resultType="TeacherDO">
         select * from `teacher` where `teachername` = #{teachername}
     </select>
 
@@ -23,17 +23,17 @@
         DELETE FROM `teacher` WHERE `id` = #{id}
     </delete>
 
-    <update id="update" parameterType="Teacher">
+    <update id="update" parameterType="TeacherDO">
         UPDATE teacher
         SET `teachername` = #{teachername}
         WHERE `id` = #{id}
     </update>
 
-    <select id="getById" resultType="Teacher">
+    <select id="getById" resultType="TeacherDO">
         select * from `teacher` where `id` = #{id}
     </select>
 
-    <select id="getByTeachid" resultType="Teacher">
+    <select id="getByTeachid" resultType="TeacherDO">
         select * from `teacher` where `teachid` = #{teachid}
     </select>
 </mapper>

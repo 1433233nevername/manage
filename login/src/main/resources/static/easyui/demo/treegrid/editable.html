@@ -54,7 +54,7 @@
 		var editingId;
 		function edit(){
 			if (editingId != undefined){
-				$('#tg').treegrid('selection', editingId);
+				$('#tg').treegrid('selectionDO', editingId);
 				return;
 			}
 			var row = $('#tg').treegrid('getSelected');

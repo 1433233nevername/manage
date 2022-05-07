@@ -5,7 +5,7 @@
 
 <mapper namespace="com.zb.manage.dal.mapper.ExamMapper">
 <!--    获取全部信息-->
-    <select id="findAll" resultType="com.zb.manage.dal.model.Exam">
+    <select id="findAll" resultType="com.zb.manage.dal.model.ExamDO">
         select * from exam
     </select>
 
@@ -20,13 +20,13 @@
         DELETE FROM exam WHERE `id` = #{id}
     </delete>
 
-    <update id="update" parameterType="Exam">
+    <update id="update" parameterType="ExamDO">
         UPDATE `exam`
         SET `lessonid` = #{lessonid}
         WHERE `id` = #{id}
     </update>
 
-    <select id="getById" resultType="Exam">
+    <select id="getById" resultType="ExamDO">
         select * from `exam` where `id` = #{id}
     </select>
 </mapper>

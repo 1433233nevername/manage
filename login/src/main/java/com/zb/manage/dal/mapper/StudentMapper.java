@@ -1,27 +1,27 @@
 package com.zb.manage.dal.mapper;
 
-import com.zb.manage.dal.model.Student;
+import com.zb.manage.dal.model.StudentDO;
 import org.apache.ibatis.annotations.Param;
 
 import java.math.BigInteger;
 import java.util.List;
 
 public interface StudentMapper {
-    Student findByName(@Param("name") String name);
+    StudentDO findByName(@Param("name") String name);
 
     //查询所有学生信息
-    List<Student> findAll();
+    List<StudentDO> findAll();
 
-    void add(Student student);
+    void add(StudentDO student);
 
     void delete(@Param("id") BigInteger id);
 
-    void update(Student student);
+    void update(StudentDO studentDO);
 
-    Student getById(@Param("id") BigInteger id);
+    StudentDO getById(@Param("id") BigInteger id);
 
-    Student getByNumber(@Param("number") BigInteger number);
+    StudentDO getByNumber(@Param("number") BigInteger number);
 
-    Student findByAge(@Param("age") String age);
+    StudentDO findByAge(@Param("age") String age);
 }
 

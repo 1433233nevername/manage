@@ -4,9 +4,9 @@ import com.zb.manage.biz.vo.RecordVO;
 import com.zb.manage.dal.mapper.ExamMapper;
 import com.zb.manage.dal.mapper.RecordMapper;
 import com.zb.manage.dal.mapper.StudentMapper;
-import com.zb.manage.dal.model.Exam;
-import com.zb.manage.dal.model.Record;
-import com.zb.manage.dal.model.Student;
+import com.zb.manage.dal.model.ExamDO;
+import com.zb.manage.dal.model.RecordDO;
+import com.zb.manage.dal.model.StudentDO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
@@ -26,13 +26,13 @@ public class RecordService {
     private ExamMapper examMapper;
 
     public List<RecordVO> findAll() {
-        List<Record> recordList = recordMapper.findAll();
-        List<Student> studentList = studentMapper.findAll();
+        List<RecordDO> recordList = recordMapper.findAll();
+        List<StudentDO> studentList = studentMapper.findAll();
         Map<BigInteger, String> studentMap = new HashMap<>();
         studentList.forEach(student -> studentMap.put(student.getId(), student.getName()));
         List<RecordVO> recordVOList = new ArrayList<>();
 
-        for (Record record : recordList) {
+        for (RecordDO record : recordList) {
             RecordVO recordVO = new RecordVO();
             BeanUtils.copyProperties(record, recordVO);
 
@@ -44,15 +44,15 @@ public class RecordService {
 
 
     public void add(BigInteger id, BigInteger examid, BigInteger studentid, Integer score) {
-        Exam exam = examMapper.getById(examid);
+        ExamDO exam = examMapper.getById(examid);
         if (null == exam) {
             throw new IllegalArgumentException("考试ID不合法:" + examid);
         }
-        Student student = studentMapper.getByNumber(studentid);
+        StudentDO student = studentMapper.getByNumber(studentid);
         if (null == student) {
             throw new IllegalArgumentException("学生ID不合法:" + studentid);
         }
-        Record record = new Record();
+        RecordDO record = new RecordDO();
         record.setId(id);
         record.setExamid(examid);
         record.setStudentid(studentid);
@@ -65,11 +65,11 @@ public class RecordService {
         recordMapper.delete(id);
     }
 
-    public void update(Record Record) {
+    public void update(RecordDO Record) {
         recordMapper.update(Record);
     }
 
-    public Record getById(BigInteger id) {
+    public RecordDO getById(BigInteger id) {
         return recordMapper.getById(id);
     }
 }

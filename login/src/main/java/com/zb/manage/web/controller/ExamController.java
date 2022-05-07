@@ -1,6 +1,6 @@
 package com.zb.manage.web.controller;
 
-import com.zb.manage.dal.model.Exam;
+import com.zb.manage.dal.model.ExamDO;
 import com.zb.manage.biz.service.ExamService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,7 +28,7 @@ public class ExamController {
 
     @RequestMapping(value = "edit")
     public String edit(BigInteger id, Model model) {
-        Exam exam = examService.getById(id);
+        ExamDO exam = examService.getById(id);
         model.addAttribute("exam", exam);
         return "exam/exam_edit";
     }

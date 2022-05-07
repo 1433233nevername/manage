@@ -5,11 +5,11 @@
 
 <mapper namespace="com.zb.manage.dal.mapper.SelectionMapper">
 <!--    获取全部信息-->
-    <select id="findAll" resultType="com.zb.manage.dal.model.Selection">
+    <select id="findAll" resultType="com.zb.manage.dal.model.SelectionDO">
         select * from selectlesson
     </select>
 
-    <select id="findByTescore" resultType="Selection">
+    <select id="findByTescore" resultType="SelectionDO">
         select * from `selectlesson` where `tescore` = #{tescore}
     </select>
 
@@ -23,18 +23,22 @@
         DELETE FROM selectlesson WHERE `id` = #{id}
     </delete>
 
-    <update id="update" parameterType="Selection">
+    <update id="update" parameterType="SelectionDO">
         UPDATE selectlesson
         SET `tescore` = #{tescore},
             `stuid` = #{stuid}
         WHERE `id` = #{id}
     </update>
 
-    <select id="getById" resultType="Selection">
+    <select id="getById" resultType="SelectionDO">
         select * from `selectlesson` where `id` = #{id}
     </select>
 
     <select id="countByLessonId" resultType="int">
         select count(*) from `selectlesson` where `lesid` = #{lessonId}
+    </select>
+
+    <select id="countByStudentId" resultType="int">
+        select count(*) from `selectlesson` where `stuid` = #{studentId}
     </select>
 </mapper>

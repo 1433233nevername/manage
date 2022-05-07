@@ -1,6 +1,6 @@
 package com.zb.manage.web.controller;
 
-import com.zb.manage.dal.model.Selection;
+import com.zb.manage.dal.model.SelectionDO;
 import com.zb.manage.biz.service.SelectionService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,7 +28,7 @@ public class SelectionController {
 
     @RequestMapping(value = "/edit")
     public String edit(@RequestParam BigInteger id, Model model) {
-        Selection selection = selectionService.getById(id);
+        SelectionDO selection = selectionService.getById(id);
         model.addAttribute("selection", selection);
         return "selection/selection_edit";
     }

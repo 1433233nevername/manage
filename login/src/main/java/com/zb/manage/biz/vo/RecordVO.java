@@ -1,10 +1,8 @@
 package com.zb.manage.biz.vo;
 
-import com.zb.manage.dal.model.Record;
+import com.zb.manage.dal.model.RecordDO;
 
-import java.math.BigInteger;
-
-public class RecordVO extends Record {
+public class RecordVO extends RecordDO {
 
     private String studentName;
 

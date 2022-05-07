@@ -3,7 +3,7 @@ package com.zb.manage.dal.model;
 import java.math.BigInteger;
 import java.util.Date;
 
-public class Teacher {
+public class TeacherDO {
     private BigInteger id;
 
     private String teachid;

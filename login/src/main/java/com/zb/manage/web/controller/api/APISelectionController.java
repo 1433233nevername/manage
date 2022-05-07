@@ -1,6 +1,6 @@
 package com.zb.manage.web.controller.api;
 
-import com.zb.manage.dal.model.Selection;
+import com.zb.manage.dal.model.SelectionDO;
 import com.zb.manage.biz.service.SelectionService;
 import com.zb.manage.web.result.CommonResult;
 import com.zb.manage.web.result.ListResult;
@@ -22,26 +22,26 @@ public class APISelectionController {
 
     @RequestMapping(value = "/list", method = RequestMethod.POST)
     public ListResult getSelectList() {
-        List<Selection> selectionList = selectionService.findAll();
+        List<SelectionDO> selectionList = selectionService.findAll();
         ListResult listResult = new ListResult();
         listResult.setRows(selectionList);
         return listResult;
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public CommonResult add(@RequestBody Selection selection) {
+    public CommonResult add(@RequestBody SelectionDO selection) {
         selectionService.add(selection.getId(), selection.getStuid(), selection.getLesid(), selection.getTescore());
         return ResultUtil.ok(null);
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public CommonResult update(@RequestBody Selection selection) {
+    public CommonResult update(@RequestBody SelectionDO selection) {
         selectionService.update(selection);
         return ResultUtil.ok(null);
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
-    public CommonResult delete(@RequestBody Selection selection) {
+    public CommonResult delete(@RequestBody SelectionDO selection) {
         selectionService.delete(selection.getId());
         return ResultUtil.ok(null);
     }

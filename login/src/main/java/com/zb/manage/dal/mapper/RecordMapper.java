@@ -1,6 +1,6 @@
 package com.zb.manage.dal.mapper;
 
-import com.zb.manage.dal.model.Record;
+import com.zb.manage.dal.model.RecordDO;
 import org.apache.ibatis.annotations.Param;
 
 import java.math.BigInteger;
@@ -9,16 +9,18 @@ import java.util.List;
 public interface RecordMapper {
 
     //查询所有用户信息
-    List<Record> findAll();
+    List<RecordDO> findAll();
 
-    void add(Record Record);
+    void add(RecordDO Record);
 
     void delete(@Param("id") BigInteger id);
 
-    void update(Record Record);
+    void update(RecordDO RecordDO);
 
-    Record getById(@Param("id") BigInteger id);
+    RecordDO getById(@Param("id") BigInteger id);
 
-    List<Record> findByExamId(@Param("examId") BigInteger examId);
+    List<RecordDO> findByExamId(@Param("examId") BigInteger examId);
+
+    int countByStudentId(@Param("studentId") BigInteger studentId);
 }
 

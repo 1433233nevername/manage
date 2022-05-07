@@ -1,7 +1,7 @@
 package com.zb.manage.biz.service;
 
 import com.zb.manage.dal.mapper.TeacherMapper;
-import com.zb.manage.dal.model.Teacher;
+import com.zb.manage.dal.model.TeacherDO;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -14,16 +14,16 @@ public class TeacherService {
     @Resource
     private TeacherMapper teacherMapper;
 
-    public List<Teacher> findAll() {
+    public List<TeacherDO> findAll() {
         return teacherMapper.findAll();
     }
 
-    public Teacher getByName(String taachername) {
+    public TeacherDO getByName(String taachername) {
         return teacherMapper.findByName(taachername);
     }
 
     public void add(BigInteger id, String teachid, String teachername) {
-        Teacher teacher = new Teacher();
+        TeacherDO teacher = new TeacherDO();
         teacher.setId(id);
         teacher.setTeachid(teachid);
         teacher.setTeachername(teachername);
@@ -35,11 +35,11 @@ public class TeacherService {
         teacherMapper.delete(id);
     }
 
-    public void update(Teacher teacher) {
+    public void update(TeacherDO teacher) {
         teacherMapper.update(teacher);
     }
 
-    public Teacher getById(BigInteger id) {
+    public TeacherDO getById(BigInteger id) {
         return teacherMapper.getById(id);
     }
 }

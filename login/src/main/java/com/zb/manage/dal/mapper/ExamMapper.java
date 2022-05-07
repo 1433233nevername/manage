@@ -1,5 +1,5 @@
 package com.zb.manage.dal.mapper;
-import com.zb.manage.dal.model.Exam;
+import com.zb.manage.dal.model.ExamDO;
 import org.apache.ibatis.annotations.Param;
 
 import java.math.BigInteger;
@@ -7,15 +7,15 @@ import java.util.List;
 
 public interface ExamMapper {
 
-    List<Exam> findAll();
+    List<ExamDO> findAll();
 
-    void add(Exam exam);
+    void add(ExamDO exam);
 
     void delete(@Param("id") BigInteger id);
 
-    void update(Exam exam);
+    void update(ExamDO exam);
 
-    Exam getById(@Param("id") BigInteger id);
+    ExamDO getById(@Param("id") BigInteger id);
 
 
 }

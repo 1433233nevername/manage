@@ -60,12 +60,21 @@
                         dataType: 'json', // 服务器响应的数据类型
                         async: false, // 关闭异步
                         success: function(rec) {
-                            $.messager.show({
-                                title:'提示',
-                                msg:'删除学生成功',
-                                timeout:2000,
-                                showType:'slide'
-                            });
+                            console.log(rec);
+                            if(rec.code === '0') {
+                                $.messager.show({
+                                    title: '提示',
+                                    msg: '删除学生成功',
+                                    timeout: 2000,
+                                    showType: 'slide'
+                                });
+                            } else {
+                                $.messager.alert({
+                                    title: '警告',
+                                    msg: rec.msg,
+                                    timeout: 2000,
+                                })
+                            }
                             $('#student_list_center_content').datagrid('reload');
                         }
                     });

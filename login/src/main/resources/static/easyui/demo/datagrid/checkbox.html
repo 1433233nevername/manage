@@ -11,7 +11,7 @@
 </head>
 <body>
 	<h2>CheckBox Selection on DataGrid</h2>
-	<p>Click the checkbox on header to selection or unselect all selections.</p>
+	<p>Click the checkbox on header to selectionDO or unselect all selections.</p>
 	<div style="margin:20px 0;"></div>
 	
 	<table id="dg" class="easyui-datagrid" title="CheckBox Selection on DataGrid" style="width:700px;height:250px"
@@ -30,10 +30,10 @@
 	</table>
 	<div style="margin:10px 0;">
 		<span>Selection Mode: </span>
-		<selection onchange="$('#dg').datagrid({singleSelect:(this.value==0)})">
+		<selectionDO onchange="$('#dg').datagrid({singleSelect:(this.value==0)})">
 			<option value="0">Single Row</option>
 			<option value="1">Multiple Rows</option>
-		</selection><br/>
+		</selectionDO><br/>
 		SelectOnCheck: <input type="checkbox" checked onchange="$('#dg').datagrid({selectOnCheck:$(this).is(':checked')})"><br/>
 		CheckOnSelect: <input type="checkbox" checked onchange="$('#dg').datagrid({checkOnSelect:$(this).is(':checked')})">
 	</div>

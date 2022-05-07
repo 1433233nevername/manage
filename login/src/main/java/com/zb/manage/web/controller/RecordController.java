@@ -1,6 +1,6 @@
 package com.zb.manage.web.controller;
 
-import com.zb.manage.dal.model.Record;
+import com.zb.manage.dal.model.RecordDO;
 import com.zb.manage.biz.service.RecordService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,7 +29,7 @@ public class RecordController {
 
     @RequestMapping(value = "/edit")
     public String edit(@RequestParam BigInteger id, Model model) {
-        Record record = recordService.getById(id);
+        RecordDO record = recordService.getById(id);
         model.addAttribute("record", record);
         return "record/record_edit";
     }

@@ -11,7 +11,7 @@
 </head>
 <body>
 	<h2>DataGrid Selection</h2>
-	<p>Choose a selection mode and selection one or more rows.</p>
+	<p>Choose a selectionDO mode and selectionDO one or more rows.</p>
 	<div style="margin:20px 0;">
 		<a href="#" class="easyui-linkbutton" onclick="getSelected()">GetSelected</a>
 		<a href="#" class="easyui-linkbutton" onclick="getSelections()">GetSelections</a>
@@ -31,10 +31,10 @@
 	</table>
 	<div style="margin:10px 0;">
 		<span>Selection Mode: </span>
-		<selection onchange="$('#dg').datagrid({singleSelect:(this.value==0)})">
+		<selectionDO onchange="$('#dg').datagrid({singleSelect:(this.value==0)})">
 			<option value="0">Single Row</option>
 			<option value="1">Multiple Rows</option>
-		</selection>
+		</selectionDO>
 	</div>
 	<script type="text/javascript">
 		function getSelected(){

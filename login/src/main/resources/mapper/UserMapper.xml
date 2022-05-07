@@ -5,15 +5,21 @@
 
 <mapper namespace="com.zb.manage.dal.mapper.UserMapper">
 <!--    获取全部信息-->
-    <select id="findAll" resultType="com.zb.manage.dal.model.User">
-        selection * from user
+    <select id="findAll" resultType="com.zb.manage.dal.model.UserDO">
+        select * from user
     </select>
 
-    <select id="findByName" resultType="User">
+    <select id="findByName" resultType="UserDO">
         select * from `user` where `username` = #{username}
     </select>
 
     <insert id="add">
+        INSERT INTO user (username, password)
+        VALUES
+            (#{username}, #{password});
+    </insert>
+
+    <insert id="update">
         INSERT INTO user (username, password)
         VALUES
             (#{username}, #{password});

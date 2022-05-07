@@ -1,6 +1,6 @@
 package com.zb.manage.web.controller;
 
-import com.zb.manage.dal.model.Lesson;
+import com.zb.manage.dal.model.LessonDO;
 import com.zb.manage.biz.service.LessonService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,7 +29,7 @@ public class LessonController {
 
     @RequestMapping(value = "/edit")
     public String edit(@RequestParam BigInteger id, Model model) {
-        Lesson lesson = lessonService.getById(id);
+        LessonDO lesson = lessonService.getById(id);
         model.addAttribute("lesson", lesson);
         return "lesson/lesson_edit";
     }

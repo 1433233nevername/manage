@@ -1,7 +1,6 @@
 package com.zb.manage.web.controller.api;
 
-import com.zb.manage.dal.model.Exam;
-import com.zb.manage.dal.model.User;
+import com.zb.manage.dal.model.UserDO;
 import com.zb.manage.biz.service.UserService;
 import com.zb.manage.web.result.CommonResult;
 import com.zb.manage.web.result.ListResult;
@@ -25,15 +24,15 @@ public class APIUserController {
 
     @RequestMapping(value = "/list", method = RequestMethod.POST)
     public ListResult getUserList() {
-        List<User> userList = userService.findAll();
+        List<UserDO> userList = userService.findAll();
         ListResult listResult = new ListResult();
         listResult.setRows(userList);
         return listResult;
     }
 
     @RequestMapping(value = "/sign_in", method = RequestMethod.POST)
-    public CommonResult add(HttpServletResponse response, @RequestBody User user) {
-        User userResult = userService.getByName(user.getUsername());
+    public CommonResult add(HttpServletResponse response, @RequestBody UserDO user) {
+        UserDO userResult = userService.getByName(user.getUsername());
         if (null == userResult) {
             throw new IllegalArgumentException("账号不存在");
         }
@@ -44,4 +43,7 @@ public class APIUserController {
         return ResultUtil.ok(null);
     }
 
-}
+
+    }
+
+

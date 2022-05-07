@@ -1,7 +1,7 @@
 package com.zb.manage.web.controller;
 
 import com.zb.manage.dal.mapper.TeacherMapper;
-import com.zb.manage.dal.model.Teacher;
+import com.zb.manage.dal.model.TeacherDO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -28,7 +28,7 @@ public class TeacherController {
 
     @RequestMapping(value = "/edit")
     public String edit(@RequestParam BigInteger id, Model model) {
-        Teacher teacher = teacherMapper.getById(id);
+        TeacherDO teacher = teacherMapper.getById(id);
         model.addAttribute("teacher", teacher);
         return "teacher/teacher_edit";
     }

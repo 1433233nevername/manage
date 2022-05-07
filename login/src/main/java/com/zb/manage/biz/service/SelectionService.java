@@ -3,10 +3,9 @@ package com.zb.manage.biz.service;
 import com.zb.manage.dal.mapper.LessonMapper;
 import com.zb.manage.dal.mapper.SelectionMapper;
 import com.zb.manage.dal.mapper.StudentMapper;
-import com.zb.manage.dal.model.Lesson;
-import com.zb.manage.dal.model.Selection;
-import com.zb.manage.dal.model.Student;
-import org.apache.ibatis.annotations.Param;
+import com.zb.manage.dal.model.LessonDO;
+import com.zb.manage.dal.model.SelectionDO;
+import com.zb.manage.dal.model.StudentDO;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -25,20 +24,20 @@ public class SelectionService {
     @Resource
     private LessonMapper lessonMapper;
 
-    public List<Selection> findAll() {
+    public List<SelectionDO> findAll() {
         return selectionMapper.findAll();
     }
 
     public void add(BigInteger id, BigInteger stuid, BigInteger lesid, String tescore) {
-        Student student = studentMapper.getByNumber(stuid);
+        StudentDO student = studentMapper.getByNumber(stuid);
         if (null == student) {
             throw new IllegalArgumentException("学生ID不合法:" + stuid);
         }
-        Lesson lesson = lessonMapper.getByLenumber(lesid);
+        LessonDO lesson = lessonMapper.getByLenumber(lesid);
         if (null == lesson) {
             throw new IllegalArgumentException("课程ID不合法:" + lesid);
         }
-        Selection selection = new Selection();
+        SelectionDO selection = new SelectionDO();
         selection.setId(id);
         selection.setStuid(stuid);
         selection.setLesid(lesid);
@@ -51,11 +50,11 @@ public class SelectionService {
         selectionMapper.delete(id);
     }
 
-    public void update(Selection selection) {
+    public void update(SelectionDO selection) {
         selectionMapper.update(selection);
     }
 
-    public Selection getById(BigInteger id) {
+    public SelectionDO getById(BigInteger id) {
         return selectionMapper.getById(id);
     }
 }

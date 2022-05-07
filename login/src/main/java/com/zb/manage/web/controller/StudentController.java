@@ -1,6 +1,6 @@
 package com.zb.manage.web.controller;
 
-import com.zb.manage.dal.model.Student;
+import com.zb.manage.dal.model.StudentDO;
 import com.zb.manage.biz.service.StudentService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,7 +28,7 @@ public class StudentController {
 
     @RequestMapping(value = "/edit")
     public String edit(@RequestParam BigInteger id, Model model) {
-        Student student = studentService.getById(id);
+        StudentDO student = studentService.getById(id);
         model.addAttribute("student", student);
         return "student/student_edit";
     }

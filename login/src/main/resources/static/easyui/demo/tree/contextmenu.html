@@ -20,7 +20,7 @@
 				animate: true,
 				onContextMenu: function(e,node){
 					e.preventDefault();
-					$(this).tree('selection',node.target);
+					$(this).tree('selectionDO',node.target);
 					$('#mm').menu('show',{
 						left: e.pageX,
 						top: e.pageY

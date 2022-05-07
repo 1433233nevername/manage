@@ -5,11 +5,11 @@
 
 <mapper namespace="com.zb.manage.dal.mapper.LessonMapper">
 <!--    获取全部信息-->
-    <select id="findAll" resultType="com.zb.manage.dal.model.Lesson">
+    <select id="findAll" resultType="com.zb.manage.dal.model.LessonDO">
         select * from lesson
     </select>
 
-    <select id="findByName" resultType="Lesson">
+    <select id="findByName" resultType="LessonDO">
         select * from `lesson` where `lename` = #{lename}
     </select>
 
@@ -23,19 +23,19 @@
         DELETE FROM `lesson` WHERE `id` = #{id}
     </delete>
 
-    <update id="update" parameterType="Lesson">
-        UPDATE lesson
+    <update id="update" parameterType="LessonDO">
+        UPDATE `lesson`
         SET `lename` = #{lename},
             `teachid` = #{teachid},
             `letime` = #{letime}
         WHERE `id` = #{id}
     </update>
 
-    <select id="getById" resultType="Lesson">
+    <select id="getById" resultType="LessonDO">
         select * from `lesson` where `id` = #{id}
     </select>
 
-    <select id="getByLenumber" resultType="Lesson">
+    <select id="getByLenumber" resultType="LessonDO">
         select * from `lesson` where `lenumber` = #{lenumber}
     </select>
 </mapper>

@@ -5,7 +5,7 @@
 
 <mapper namespace="com.zb.manage.dal.mapper.RecordMapper">
 <!--    获取全部信息-->
-    <select id="findAll" resultType="com.zb.manage.dal.model.Record">
+    <select id="findAll" resultType="com.zb.manage.dal.model.RecordDO">
         select * from exam_record
     </select>
 
@@ -19,7 +19,7 @@
         DELETE FROM `exam_record` WHERE `id` = #{id}
     </delete>
 
-    <update id="update" parameterType="Record">
+    <update id="update" parameterType="RecordDO">
         UPDATE `exam_record`
         SET `examid` = #{examid},
             `studentid` = #{studentid},
@@ -27,11 +27,15 @@
         WHERE `id` = #{id}
     </update>
 
-    <select id="getById" resultType="Record">
+    <select id="getById" resultType="RecordDO">
         select * from `exam_record` where `id` = #{id}
     </select>
 
-    <select id="findByExamId" resultType="com.zb.manage.dal.model.Record">
+    <select id="findByExamId" resultType="com.zb.manage.dal.model.RecordDO">
         select * from `exam_record` where `examid` = #{examId};
+    </select>
+
+    <select id="countByStudentId" resultType="int">
+        select count(*) from `exam_record` where `studentid` = #{studentId}
     </select>
 </mapper>

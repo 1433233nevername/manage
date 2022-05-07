@@ -1,6 +1,6 @@
 package com.zb.manage.dal.model;
 
-public class User {
+public class UserDO {
     private Integer id;
 
     private String username;

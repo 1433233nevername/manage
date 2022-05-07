@@ -14,12 +14,12 @@
 	<p>This sample shows how to change the row border style of datagrid.</p>
 	<div style="margin:20px 0;">
 		<span>Border:</span>
-		<selection onchange="changeBorder(this.value)">
+		<selectionDO onchange="changeBorder(this.value)">
 			<option value="lines-both">Both</option>
 			<option value="lines-no">No Border</option>
 			<option value="lines-right">Right Border</option>
 			<option value="lines-bottom">Bottom Border</option>
-		</selection>
+		</selectionDO>
 		<span>Striped:</span>
 		<input type="checkbox" onclick="$('#dg').datagrid({striped:$(this).is(':checked')})">
 	</div>

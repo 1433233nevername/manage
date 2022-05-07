@@ -57,7 +57,7 @@
 		function onContextMenu(e,row){
 			if (row){
 				e.preventDefault();
-				$(this).treegrid('selection', row.id);
+				$(this).treegrid('selectionDO', row.id);
 				$('#mm').menu('show',{
 					left: e.pageX,
 					top: e.pageY

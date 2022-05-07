@@ -3,7 +3,7 @@ package com.zb.manage.dal.model;
 import java.math.BigInteger;
 import java.util.Date;
 
-public class Record {
+public class RecordDO {
     private BigInteger id;
 
     private BigInteger examid;
